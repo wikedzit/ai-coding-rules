@@ -1,0 +1,12 @@
+---
+description: Apply these rules when Reviewing, editing or adding new services
+globs: 
+alwaysApply: false
+---
+# Services:
+- Services are used to perform the Business Logic for each endpoint.
+- Services must be stored in the App/Services/Api folder.
+- Model should dictate the fields that are required for the service.
+- Services must be named like the model they are related to e.g. UserService.php
+- Service will retuen paginated data if the model has pagination data otherwise it will return a single item.
+- Use Laravel has built-in support for pagination. The best approach involves using Eloquent’s paginate() method, which automatically structures the pagination data for JSON responses.
