@@ -1,0 +1,15 @@
+---
+description: Apply these rules when Reviewing, editing or adding new controllers
+globs: 
+alwaysApply: false
+---
+# Controllers
+- All API controllers must extend the ApiController class. which defines the successResponse and errorResponse methods. i.e protected function successResponse($data, string $message = '', int $code = 200): JsonResponse
+- $data that is passed to successResponse must be a valid JsonResource object.
+- You must use the correct HTTP response codes for each endpoint.
+- Never call midlewares in the controller, if such code exists remove it
+- Controller must call the services to perform the logic and return the response from the services.
+- Where necessary, use Policies inside the controller to check for authorization and data access control.
+- ApiController class is located in the App/Http/Controllers/Api/ApiController.php file
+- If a Controller returns a list of items, it must define a pagination Resource for the data and pass $data to the successResponse method.
+- Changes to a Controller that extends ApiController MUST not force a change of the signature and implementation of the successResponse and errorResponse methods.

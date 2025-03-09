@@ -1,0 +1,41 @@
+---
+description: You MUST apply these rules to the entire codebase each time you are working on the codebase
+globs: 
+alwaysApply: false
+---
+# System Rules
+- If there is a shell/Terminal command to run, Determine the current OS 
+- Remember this information and make sure that You must OS compatible commands
+  i.e give Windows commands in Windows OS, Linux commands in Linux OS and MacOS commands in MacOS OS
+
+# About the Codebase
+- This is a PHP 8.3, POstgress, JWT, AWS S3, Laravel 11.35 Project
+- The codebase is dockerized and managed using Laravel's ./vendor/bin/sail 
+- The codebase is version controlled using Git and GitHub
+- Authentication is done using JWT tokens.
+- You must check the composer.json for the correct JWT library that has been used.
+
+# RUlES you MUST follow
+- Do not IGNORE, SKIPP or ASSUME anything APPLY all the relevant rules to the dot
+- You MUST always List the rules you have applied for the current task with a check (green tick icon)
+- BEfore you apply any change to the codebase you must idenditify the files that will be affected by the change (i.e existing files that will be updated and new files that will be created). Then List the names of the files you will be updating/creating.
+
+# Coding Style: (These routes applies to the entire codebase)
+- Follow the SOLID principles.
+- Follow the DRY principle.
+- All Route request data must be processed and validate d using HTTP Request classes.
+- Create Request classes for all HTTP request data.
+- When defining a new Request class, you must ensure that all the fields (As defined by the model) are validated and that the request data is correctly processed.
+- Always keep controllers thin, and delegate complex logic to Services
+- All Model CRUD operations MUST be done using Services
+- Do not SKIP or ASSUME anything. Better to break a long task into smaller tasks and give followup questions
+- Ensure consistency in the codebase, if you are working on a feature check if a similar feature exists and use it as a guide. But that feature MUST have followed the rules.
+- Write code with clarity and maintainability in mind
+- Apply PHPDOC comments to classes, methods, and properties.
+- BEfore Creating any File first verify that there is no existing file that does the same thing.
+- Follow Laravels conventions and best practices
+
+
+# Other Rules: Applied all the time Everywhere
+- Ensure that Code Files are properly named and that they are not duplicated.
+- Some code changes may involve updating a number of files, Avoid updating all the files in one session we can always followup with Continue statments to proceed from where we ended. This way we can avoid breaking the codebase and make sure that nothin is Skipped or IGNORED.

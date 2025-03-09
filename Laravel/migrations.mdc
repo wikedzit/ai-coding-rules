@@ -1,0 +1,12 @@
+---
+description: Apply these rules when Reviewing, editing or adding new migrations
+globs: 
+alwaysApply: false
+---
+# DB Migrations
+- Each table must have a migration file
+- Before creating a new migration file, verify that there is no existing migration that does the same thing. To avoid causing conflicts when running migrations.
+- All migration files must be prefixed with the current date yyyy_mm_dd_version. See the existing migration files for examples
+- To create a new migration file use the command ./vandor/bin sail make:migration <migration name>
+- When defining new migrations use bigincrement for primary keys and unsignedBigInteger for foreign keys.
+- Migration updates, necessitates updating the model and the Factory

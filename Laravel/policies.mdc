@@ -1,0 +1,9 @@
+---
+description: Apply these rules when Reviewing, editing or adding new policies
+globs: 
+alwaysApply: false
+---
+# Policies:
+- Policies are used to check for authorization and data access control.
+- Register policies in the AuthServiceProvider.php file.
+- Apply policies in the controllers.

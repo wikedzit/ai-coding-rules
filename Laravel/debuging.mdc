@@ -1,0 +1,14 @@
+---
+description: Apply these rules when Reviewing, editing or fixing broken code
+globs: 
+alwaysApply: false
+---
+# Debug and Fixing Broken Code:
+- When fixing broken code, always check the codebase for the correct implementation of the feature you are fixing.
+- Verify that all the imports are correct and that the codebase is not missing any imports.
+- Verify that all the files are correctly defined and that the codebase is not missing any files.
+- Verify that namespaces are correctly defined
+- Verify the correctness of Class and Method signatures
+- Do not rush to create new files, first verify that there is no existing file that does the same thing.
+- After applying a fix for a bug, assess the nearby code to see if the fix is relevant to that part of the codebase and apply it as well. This way we will be addressing potential bugs in the nearby code.
+- ApiController is final, changes to other parts of the codebase MUST not force any on ApiController.

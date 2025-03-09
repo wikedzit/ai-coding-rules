@@ -1,0 +1,16 @@
+---
+description: Apply these rules when Reviewing, editing or adding new routes
+globs: 
+alwaysApply: false
+---
+# Routes:
+NOTE: Routes for this project are structured into three files, public, api, and admin routes all applies api middleware.
+* public routes: these are the routes that are accessible to all users without authentication.
+* api routes: these are the routes that are accessible to all users with authentication
+* admin routes: these are the routes that are accessible to all users with authentication and are only accessible to admin users
+- Assess and make sure that routes are properly defined in the correct file.
+- Never use resource routes e.g. Reoute::apiResource or Reoute::resource. All routes (endpoints) MUST be explicitly defined.
+- For any change that you make to the routes files (i.e api.php or web.php or admin.php) you MUST run the commands; "optimize:clear" followed by "route:List" to recache the routes and confirm if the routes are properly defined and listed.
+- Logically group related endpoints and add comment labels to state the purpose of the endpoints.
+- If routes are grouped in a prefix, ensure that the prefix is used in the route definition.
+- If routes are grouped under a prefix then ensure that the core routes for that prefix are defined at the end of the group. This way we will avoid routes being defined in the wrong order.

@@ -1,0 +1,26 @@
+---
+description: Apply these rules when Reviewing, editing or adding new file
+globs: 
+alwaysApply: false
+---
+# File Structure
+- All Contollers files must be stored in the App/Http/Controllers/Api folder
+- All Requests files must be stored in the App/Http/Requests/Api folder
+- All Resources files must be stored in the App/Http/Resources/Api folder
+- All Policies files must be stored in the App/Policies/Api folder
+- All Services files must be stored in the App/Services/Api folder
+- All Admin Contollers files must be stored in the App/Http/Controllers/Api/Admin folder
+- All Admin Requests files must be stored in the App/Http/Requests/Api/Admin folder
+- All Admin Resources files must be stored in the App/Http/Resources/Api/Admin folder
+- All Admin Policies files must be stored in the App/Policies/Api/Admin folder
+- All Admin Services files must be stored in the App/Services/Api/Admin folder
+- Where necessary subfolders Should be created within the respecitve Api folder to organized related files e.g. User, Document, e.t.c
+- Any time you find a file that is not in the correct folder, move it to the correct folder. And notify me in the chat, State what you did and why you did it.
+- When we are implementing the logic for uploading files, review the existing s3 implementation and reuse.
+- S3StorageService.php is the service that handles the s3 storage implementation on this project.
+- To upload any media file (Images, Videos, Audios, e.t.c) use method uploadMediaFile in S3StorageService.php file.
+- To upload any document file (PDF, DOC, e.t.c) use method uploadDocumentFile in S3StorageService.php file.
+- S3StorageService also features other methods e.g moveFile, deleteFile, getTemporaryUrl, e.t.c
+- To move any file from one folder to another use method moveFile in S3StorageService.php file.
+- To delete any file from s3 use method deleteFile in S3StorageService.php file.
+- To get a temporary url for a file use method getTemporaryUrl in S3StorageService.php file.

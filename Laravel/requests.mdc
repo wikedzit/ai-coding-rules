@@ -1,0 +1,9 @@
+---
+description: Apply these rules when Reviewing, editing or adding new requests
+globs: 
+alwaysApply: false
+---
+# Requests:
+- All Route request data must be processed and validated using HTTP Request classes.
+- Create Request classes for all HTTP request data.
+- When defining a new Request class, you must ensure that all the fields (As defined by the model) are validated and that the request data is correctly processed.

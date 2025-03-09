@@ -1,0 +1,7 @@
+---
+description: Apply these rules when Reviewing, editing or adding new email service
+globs: 
+alwaysApply: false
+---
+# Email Service: 
+- The codebase features AWS SES Email Service integration for sending emails You MUST use the Email service for sending emails.

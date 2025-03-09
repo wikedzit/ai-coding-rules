@@ -1,0 +1,42 @@
+---
+description: Apply these rules when Reviewing, editing or adding new responses
+globs: 
+alwaysApply: false
+---
+# Responses:
+- All responses must be JSON.
+- Each endpoint must feature a JsonResource e.g. "UserResource.php" Class that defines the response structure.
+- If the JsonResource class alreadty exists, review it if has updated content aligning with the current state of the codebase. Then Reuse it
+- a JsonResource will serve as a schema definition for the response object.
+- If a JsonResource class formats an output that calls data from other collections, the other data points they must be called via their Resource Definitions.
+- When defining a new resource class, you must ensure that all the fields are correctly mapped from the model and its relationships.
+- If the action expects a list of items, the response must include a meta object with pagination data. To keep things in consistency, the meta object must be defined in the Resource class. To achieve this a reource class will check if the data object contains pagination data and if so, it will include it in the response as a meta object.
+
+- ApiController response payload must Include the following information [status, message, data, meta]
+Example: One item
+{
+  "status": "success",
+  "message": "User created successfully",
+  "data": {
+    // item data
+  },
+}
+
+Example: Multiple items
+{
+  "status": "success",
+  "message": "User created successfully",
+  "data": [
+    // array of returned items
+  ],
+  "meta": {
+      "current_page" => 1
+      "from" => 1
+      "last_page" => 1
+      "per_page" => 15
+      "to" => 3
+      "total" => 3
+  },
+}
+
+- When a response object ApiController will check if data contains pagination data and if so, it will include it in the response as a meta object.

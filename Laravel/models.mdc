@@ -1,0 +1,14 @@
+---
+description: Apply these rules when Reviewing, editing or adding new models
+globs: 
+alwaysApply: false
+---
+# Models
+- Model file must be created for each migration file
+- Each Model that you create must be accompanied by the Factory.
+- Verify and make sure that Factory fields are defined correctly.
+- When creating a new model for a migration you must make sure that all its fields are correctly mapped as defined in the migration file.
+- Asses and determine field definition in the model and specify fields that are fillable, Visible, Cast, Append and Hidden e.t.c
+- Where necessary define and use scopes for the model.
+- Be quick to create accessors and mutators for models.
+- When a model is added /updated you must review and update the Relationships of that model
